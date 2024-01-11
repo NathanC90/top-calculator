@@ -2,32 +2,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .container {
-    width: 450px;
-    height: 450px;
+    width: 430px;
+    height: 480px;
     border: 1px solid black;
-    margin: 150px auto;
+    margin: 180px auto;
     padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
+}
+
+#current-value {
+    height: 80px;
 }
 
 .button-section {
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     padding: 10px;
     justify-content: space-between;
 }
 button {
-    width: 85px;
-    height: 42px;
+    width: 82px;
+    height: 55px;
 }
 
 .zero {
-    width: 182px;
+    width: 174px;
 }
