@@ -2,20 +2,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
 }
 
+body {
+    background: #FBF9F1
+}
+
 .container {
-    width: 430px;
+    width: 400px;
     height: 480px;
-    border: 1px solid black;
+    border: 3px solid #04364A;
     margin: 180px auto;
     padding: 25px;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background: #DAFFFB;
 }
 
 #current-value {
@@ -23,14 +28,28 @@
 }
 
 .button-section {
-    border: 1px solid black;
+    /* border: 1px solid #04364A; */
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
-    padding: 10px;
     justify-content: space-between;
 }
 button {
-    width: 82px;
-    height: 60px;
+    width: 80px;
+    height: 63px;
+    background: #64CCC5;
+}
+
+button:hover {
+    background: #176B87;
+    color: #DAFFFB;
+    cursor: pointer;
+}
+
+.clear,
+.sign,
+.percent,
+.delete {
+    background: #04364A;
+    color: #DAFFFB;
 }
