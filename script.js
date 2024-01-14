@@ -40,6 +40,28 @@ operands.forEach(operand => {
     })
 })
 
+// Detect operator buttons
+operators.forEach(operator => {
+    operator.addEventListener('click', function() {
+        let symbols = operator.textContent;
+        switch (symbols){
+            case '+':
+                console.log('add');
+                break;
+            case '-':
+                console.log('subtract');
+                break;
+            case '*':
+                console.log('multiply');
+                break;
+            case '÷':
+                console.log('divide');
+                break;
+
+        }
+    })
+})
+
 function operate (firstNumber, secondNumber, operator) {
 
 }
