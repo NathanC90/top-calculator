@@ -25,15 +25,18 @@ function divide(firstNumber, secondNumber) {
 // For example, 3 + 5. Create three variables for each of the parts of a calculator operation.
 // Create a variable for the first number, the operator, and the second number.
 // You’ll use these variables to update your display later.
-let firstNumber = document.getElementById('current-value');
+let firstNumber = '';
 let operators = document.querySelectorAll(".operator");
-let secondNumber;
+let secondNumber = '';
 let operands = document.querySelectorAll(".operand");
+let currentValue = document.getElementById('current-value');
 
 // Make the clicked numbers display on the screen
 operands.forEach(operand => {
     operand.addEventListener('click', function(){
-        firstNumber.textContent += operand.textContent;
+        firstNumber += operand.textContent;
+        console.log(firstNumber);
+        currentValue.textContent = firstNumber;
     })
 })
 
@@ -50,7 +53,8 @@ function operate (firstNumber, secondNumber, operator) {
 // Add a “clear” button.
 let clear = document.querySelector('.clear');
 clear.addEventListener('click', function() {
-    firstNumber.textContent = '0';
+    currentValue.textContent = '0';
+    firstNumber = '';
 })
 
 // Create the functions that populate the display when you click the number buttons.
@@ -61,9 +65,9 @@ clear.addEventListener('click', function() {
 // Delete the last digit for revision
 let revision = document.querySelector('.delete');
 revision.addEventListener('click', function() {
-    let str = firstNumber.textContent;
+    let str = currentValue.textContent;
     str = str.slice(0, -1) // Remove the last character
-    firstNumber.textContent = str;
+    currentValue.textContent = str;
 })
 // You should already have the code that can populate the display, so once operate() has been called,
 // update the display with the ‘solution’ to the operation.
