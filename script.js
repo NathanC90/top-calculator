@@ -69,6 +69,10 @@ revision.addEventListener('click', function() {
     str = str.slice(0, -1) // Remove the last character
     currentValue.textContent = str;
     firstNumber = str;
+    console.log(`firstNumber: ${firstNumber}`);
+    if (firstNumber === '') {
+        currentValue.textContent = '0';
+    }
 })
 // You should already have the code that can populate the display, so once operate() has been called,
 // update the display with the ‘solution’ to the operation.
