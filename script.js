@@ -28,6 +28,10 @@ operands.forEach(operand => {
 
 
 // Add a “clear” button.
+let clear = document.querySelector('.clear');
+clear.addEventListener('click', function() {
+    firstNumber.textContent = '0';
+})
 // Create the functions that populate the display when you click the number buttons.
 // You should be storing the ‘display value’ in a variable somewhere for use in the next step.
 // Make the calculator work! You’ll need to store the first number and second number that are input into the calculator,
