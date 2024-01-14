@@ -5,6 +5,22 @@
 // multiply
 // divide
 
+function add(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
+}
+
+function subtract(firstNumber, secondNumber) {
+    return firstNumber - secondNumber;
+}
+
+function multiply(firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
+}
+
+function divide(firstNumber, secondNumber) {
+    return firstNumber / secondNumber;
+}
+
 // A calculator operation will consist of a number, an operator, and another number. 
 // For example, 3 + 5. Create three variables for each of the parts of a calculator operation.
 // Create a variable for the first number, the operator, and the second number.
@@ -21,7 +37,7 @@ operands.forEach(operand => {
     })
 })
 
-function display (firstNumber, secondNumber, operator) {
+function operate (firstNumber, secondNumber, operator) {
 
 }
 
