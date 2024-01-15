@@ -51,4 +51,6 @@ operators.forEach(operator => {
 
 function handleOperators(operator) {
     operator = operator;  // assign the retrieved operator to the operator variable
+    currentValue = previousValue; // save the current value as previous value and reset current vlaue
+    currentValue = '';
 }
