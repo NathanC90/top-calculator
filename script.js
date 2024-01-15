@@ -45,6 +45,10 @@ function handleNumbers(number) {
 
 operators.forEach(operator => {
     operator.addEventListener('click', function() {
-        console.log(operator);
+        handleOperators(operator.textContent);
     })
 })
+
+function handleOperators(operator) {
+    operator = operator;  // assign the retrieved operator to the operator variable
+}
