@@ -108,3 +108,15 @@ function operate() {
 function round(num) {
     return Math.round(num * 1000000) / 1000000;
 }
+
+// % function
+percent.addEventListener('click', function() {
+    percentage();
+    display.textContent = currentValue;
+})
+
+function percentage() {
+    currentValue = Number(currentValue);
+    currentValue = currentValue / 100;
+    currentValue = currentValue.toString();
+}
