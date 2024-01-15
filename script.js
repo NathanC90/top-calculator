@@ -42,3 +42,9 @@ function handleNumbers(number) {
         currentValue += number;
     }
 }
+
+operators.forEach(operator => {
+    operator.addEventListener('click', function() {
+        console.log(operator);
+    })
+})
