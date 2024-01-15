@@ -29,3 +29,9 @@ let decimalBtn = document.getElementById('decimal-btn');
 
 // = button
 let equals = document.getElementById('equals');
+
+numbers.forEach(number => {
+    number.addEventListener('click', function() {
+        console.log(number.textContent);
+    })
+})
