@@ -23,7 +23,7 @@ body {
     background: #DAFFFB;
 }
 
-#current-value {
+#display {
     border: 3px solid #04364A;
     width: 100%;
     height: 80px;
