@@ -54,9 +54,9 @@ operators.forEach(operator => {
     })
 })
 
-function handleOperators(operator) {
-    operator = operator;  // assign the retrieved operator to the operator variable
-    currentValue = previousValue; // save the current value as previous value and reset current vlaue
+function handleOperators(op) {
+    operator = op;  // assign the retrieved operator to the operator variable
+    previousValue = currentValue; // save the current value as previous value and reset current vlaue
     currentValue = '';
 }
 
@@ -79,3 +79,24 @@ deleteBtn.addEventListener('click', function() {
 })
 
 // Do the calculation
+equals.addEventListener('click', function() {
+    operate();
+})
+
+function operate() {
+    previousValue = Number(previousValue);
+    currentValue = Number(currentValue);
+
+    if(operator === '+') {
+        previousValue += currentValue;
+    } else if (operator === '-') {
+        previousValue -= currentValue;
+    } else if (operator === '*') {
+        previousValue *= currentValue;
+    } else {
+        previousValue /= currentValue;
+    }
+    console.log(previousValue);
+    
+    display.textContent = previousValue;
+}
