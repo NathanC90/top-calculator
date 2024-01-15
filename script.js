@@ -5,21 +5,9 @@
 // multiply
 // divide
 
-function add(firstNumber, secondNumber) {
-    return firstNumber + secondNumber;
-}
-
-function subtract(firstNumber, secondNumber) {
-    return firstNumber - secondNumber;
-}
-
-function multiply(firstNumber, secondNumber) {
-    return firstNumber * secondNumber;
-}
-
-function divide(firstNumber, secondNumber) {
-    return firstNumber / secondNumber;
-}
+// Status
+let isNegative = false;
+let hasPoint = false;
 
 // A calculator operation will consist of a number, an operator, and another number. 
 // For example, 3 + 5. Create three variables for each of the parts of a calculator operation.
@@ -43,26 +31,31 @@ operands.forEach(operand => {
 // Detect operator buttons
 operators.forEach(operator => {
     operator.addEventListener('click', function() {
-        let symbols = operator.textContent;
-        switch (symbols){
+        let symbol = operator.textContent;
+        switch (symbol){
             case '+':
-                console.log('add');
+                currentValue.textContent = '';
+                firstNumber = firstNumber;
+                operate(symbol, firstNumber, secondNumber);
+                return 'add';
                 break;
             case '-':
-                console.log('subtract');
+                return 'subtract';
                 break;
             case '*':
-                console.log('multiply');
+                return 'multiply';
                 break;
             case '÷':
-                console.log('divide');
+                return 'divide';
                 break;
-
+            default:
+                return '`Invalid operator`'
         }
     })
 })
 
-function operate (firstNumber, secondNumber, operator) {
+function operate (operator, firstNumber, secondNumber) {
+    console.log(`${firstNumber}, ${secondNumber}, ${operator}`);
 
 }
 
