@@ -32,6 +32,11 @@ let equals = document.getElementById('equals');
 
 numbers.forEach(number => {
     number.addEventListener('click', function() {
-        console.log(number.textContent);
+        handleNumbers(number.textContent);
+        display.textContent = currentValue;
     })
 })
+
+function handleNumbers(number) {
+    currentValue += number;
+}
