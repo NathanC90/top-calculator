@@ -70,6 +70,8 @@ clearBtn.addEventListener('click', function() {
 
 // delete the last digit
 deleteBtn.addEventListener('click', function() {
+    previousValue.toString();
+    currentValue.toString();
     currentValue = currentValue.slice(0, -1);
     if(currentValue === '') {
         display.textContent = '0';
@@ -81,6 +83,7 @@ deleteBtn.addEventListener('click', function() {
 // Do the calculation
 equals.addEventListener('click', function() {
     operate();
+    display.textContent = previousValue;
 })
 
 function operate() {
@@ -96,7 +99,12 @@ function operate() {
     } else {
         previousValue /= currentValue;
     }
-    console.log(previousValue);
-    
-    display.textContent = previousValue;
+    currentValue = previousValue;
+    previousValue = round(previousValue);
+    previousValue = previousValue.toString();
+    currentValue = currentValue.toString();
+}
+
+function round(num) {
+    return Math.round(num * 1000000) / 1000000;
 }
