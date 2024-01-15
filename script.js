@@ -68,4 +68,14 @@ clearBtn.addEventListener('click', function() {
     operator = '';
 })
 
+// delete the last digit
+deleteBtn.addEventListener('click', function() {
+    currentValue = currentValue.slice(0, -1);
+    if(currentValue === '') {
+        display.textContent = '0';
+    } else {
+        display.textContent = currentValue;
+    }
+})
+
 // Do the calculation
