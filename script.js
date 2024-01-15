@@ -38,5 +38,7 @@ numbers.forEach(number => {
 })
 
 function handleNumbers(number) {
-    currentValue += number;
+    if (currentValue.length <= 10) {
+        currentValue += number;
+    }
 }
