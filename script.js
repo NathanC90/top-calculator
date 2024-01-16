@@ -100,6 +100,7 @@ percent.addEventListener('click', function() {
 function percentage() {
     currentValue = Number(currentValue);
     currentValue = currentValue / 100;
+    currentValue = round(currentValue);
     currentValue = currentValue.toString();
 }
 
