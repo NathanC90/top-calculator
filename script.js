@@ -65,6 +65,9 @@ deleteBtn.addEventListener('click', function() {
 // Do the calculation
 equals.addEventListener('click', function() {
     operate();
+    if (previousValue === 'Infinity') {
+        previousValue = "Error";
+    }
     display.textContent = previousValue;
 })
 
@@ -79,7 +82,7 @@ function operate() {
     } else if (operator === '*') {
         previousValue *= currentValue;
     } else if (operator === '÷') {
-        previousValue /= currentValue;
+            previousValue /= currentValue;
     } else {
         previousValue = currentValue;
     }
