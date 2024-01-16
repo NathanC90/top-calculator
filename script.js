@@ -123,8 +123,10 @@ function setMinus() {
     currentValue = Number(currentValue);
     currentValue = round(currentValue);
     currentValue = currentValue.toString();
-    if(!currentValue.includes('-')){
+    if(currentValue != '0' && !currentValue.includes('-')){
         currentValue = `-${currentValue}`;
+    } else if (currentValue === '0'){
+        currentValue = currentValue;
     } else {
         currentValue = currentValue.slice(1);
     }
