@@ -59,3 +59,9 @@ button:hover {
     background: #04364A;
     color: #DAFFFB;
 }
+
+.copyright {
+    font-size: 20px;
+    text-align: center;
+    padding: 35px 0 15px;
+}
