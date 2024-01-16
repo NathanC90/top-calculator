@@ -34,8 +34,6 @@ function handleNumbers(number) {
 // handle operators
 operators.forEach(operator => {
     operator.addEventListener('click', function() {
-        // Ensure the results are updated while users select different operators.
-        operate(); 
         handleOperators(operator.textContent);
         // make the display div show the upcoming number after an operator is clicked
         display.textContent = currentValue;
