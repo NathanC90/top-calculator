@@ -120,3 +120,31 @@ function percentage() {
     currentValue = currentValue / 100;
     currentValue = currentValue.toString();
 }
+
+// +/- function
+plusOrMinus.addEventListener('click', function() {
+    setMinus();
+    display.textContent = currentValue;
+})
+
+function setMinus() {
+    if(!currentValue.includes('-')){
+        currentValue = `-${currentValue}`;
+    } else {
+        currentValue = currentValue.slice(1);
+    }
+}
+
+// decimal function
+decimalBtn.addEventListener('click', function() {
+    addDecimal();
+    display.textContent = currentValue;
+})
+
+function addDecimal() {
+    if(!currentValue.includes('.')) {
+        currentValue = `${currentValue}.`;
+    } else {
+        currentValue = currentValue;
+    }
+}
