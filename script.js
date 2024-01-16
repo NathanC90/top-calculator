@@ -24,6 +24,10 @@ numbers.forEach(number => {
 function handleNumbers(number) {
     if (currentValue.length <= 10) {
         currentValue += number;
+
+        // Remove leading zeros
+        currentValue = Number(currentValue);
+        currentValue = currentValue.toString();
     }
 }
 
