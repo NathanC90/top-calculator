@@ -78,8 +78,10 @@ function operate() {
         previousValue -= currentValue;
     } else if (operator === '*') {
         previousValue *= currentValue;
-    } else {
+    } else if (operator === '÷') {
         previousValue /= currentValue;
+    } else {
+        previousValue = currentValue;
     }
     currentValue = previousValue;
     previousValue = round(previousValue);
