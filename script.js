@@ -26,8 +26,7 @@ function handleNumbers(number) {
         currentValue += number;
 
         // Remove leading zeros
-        currentValue = Number(currentValue);
-        currentValue = currentValue.toString();
+        currentValue = currentValue.replace(/^0+/, "");
     }
 }
 
@@ -140,7 +139,7 @@ decimalBtn.addEventListener('click', function() {
 
 function addDecimal() {
     if(!currentValue.includes('.')) {
-        currentValue = `${currentValue}.`;
+        currentValue += '.';
     } else {
         currentValue = currentValue;
     }
