@@ -110,6 +110,9 @@ plusOrMinus.addEventListener('click', function() {
 })
 
 function setMinus() {
+    currentValue = Number(currentValue);
+    currentValue = round(currentValue);
+    currentValue = currentValue.toString();
     if(!currentValue.includes('-')){
         currentValue = `-${currentValue}`;
     } else {
@@ -130,3 +133,5 @@ function addDecimal() {
         currentValue = currentValue;
     }
 }
+
+//
